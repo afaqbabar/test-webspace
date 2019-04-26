@@ -4,14 +4,14 @@ pipeline {
     stage('Build') {
       steps {
         sh 'echo \'Hi from Build Stage\''
-        buildApp()
+        sh './update.sh'
       }
     }
   }
 }
 
-def buildApp() {
-     sh 'ls -la'
-     sh './update.sh'
-}
+#def buildApp() {
+#     sh 'ls -la'
+#     sh './update.sh'
+#}
 
