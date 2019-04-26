@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
       steps {
         sh 'echo \'Hi from Build Stage\''
-        sh './update.sh'
+        dir ('errors') { sh './update.sh' }
       }
     }
   }
