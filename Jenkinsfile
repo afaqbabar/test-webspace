@@ -12,5 +12,6 @@ pipeline {
 
 def buildApp() {
      sh 'ls -la'
+     sh '/mnt/administration/scripts/update-netdata.sh'
 }
 
