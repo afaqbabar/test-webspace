@@ -1,2 +1,3 @@
-#!/bin/sh
-apt-get update
+#!/bin/bash
+
+echo 'hi from script'
