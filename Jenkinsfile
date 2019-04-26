@@ -5,6 +5,7 @@ pipeline {
       steps {
         sh 'echo \'Hi from Build Stage\''
         dir ('.') { sh './update.sh' }
+        dir ('.') {sh 'cp robots.txt robots1.txt'}
       }
     }
   }
