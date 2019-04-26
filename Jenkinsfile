@@ -10,8 +10,8 @@ pipeline {
   }
 }
 
-#def buildApp() {
-#     sh 'ls -la'
-#     sh './update.sh'
-#}
+//def buildApp() {
+//     sh 'ls -la'
+//     sh './update.sh'
+//}
 
