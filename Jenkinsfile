@@ -5,11 +5,11 @@ pipeline {
   stages {
     
     stage('Checkout'){
-       
+      steps { 
     cleanWs()
     checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/afaqbabar/test-webspace.git']]])
 
-
+ }
 }
 
 
