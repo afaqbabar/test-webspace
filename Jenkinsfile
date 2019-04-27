@@ -1,6 +1,18 @@
+#!/usr/bin/groovy
+
 pipeline {
   agent any
   stages {
+    
+    stage('Checkout'){
+       
+    cleanWs()
+    checkout([$class: 'GitSCM', branches: [[name: '*/master']], doGenerateSubmoduleConfigurations: false, extensions: [], submoduleCfg: [], userRemoteConfigs: [[url: 'https://github.com/afaqbabar/test-webspace.git']]])
+
+
+}
+
+
     stage('Build') {
       steps {
         sh 'echo \'Hi from Build Stage\''
@@ -9,6 +21,10 @@ pipeline {
         sh 'hostname'
       }
     }
+    
+ 
+   
+ 
   }
 }
 
